@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
+    "gh-pages": "2.0.1",
     "husky": "^2.2.0",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^8.0.10",
@@ -62,6 +63,7 @@
     "url": "git+https://github.com/artaksuta/aksuta.ru.git"
   },
   "scripts": {
+    "deploy": "gatsby build && NODE_DEBUG=gh-pages gh-pages -d public",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
