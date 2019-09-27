@@ -36,11 +36,11 @@ const Layout = props => {
                   Обо мне
                 </Link>
               </li>
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`} activeClassName="nav-current">
-                  Элементы
-                </Link>
-              </li>
+              {/*<li className="nav-elements" role="menuitem">*/}
+              {/*  <Link to={`/elements`} activeClassName="nav-current">*/}
+              {/*    Элементы*/}
+              {/*  </Link>*/}
+              {/*</li>*/}
             </ul>
           </nav>
           <div className="site-head-center">
