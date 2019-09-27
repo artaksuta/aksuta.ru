@@ -63,11 +63,12 @@
     "url": "git+https://github.com/artaksuta/aksuta.ru.git"
   },
   "scripts": {
-    "deploy": "gatsby build && NODE_DEBUG=gh-pages gh-pages -d public",
+    "deploy": "gatsby build && gh-pages -d public -u \"Github Actions felex-ae@ya.ru\"",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "build": "gatsby build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "husky": {
