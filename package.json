@@ -64,7 +64,6 @@
   },
   "scripts": {
     "deploy": "gatsby build && NODE_DEBUG=gh-pages gh-pages -d public",
-    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
@@ -73,7 +72,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "echo $HUSKY_GIT_STDIN | hooks/pre-push-lfs $HUSKY_GIT_PARAMS",
+      "post-checkout": "echo $HUSKY_GIT_STDIN | hooks/post-checkout-lfs $HUSKY_GIT_PARAMS",
+      "post-commit": "echo $HUSKY_GIT_STDIN | hooks/post-commit-lfs $HUSKY_GIT_PARAMS",
+      "post-merge": "echo $HUSKY_GIT_STDIN | hooks/post-merge-lfs $HUSKY_GIT_PARAMS"
     }
   }
 }
